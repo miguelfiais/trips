@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import TripDescription from "./components/TripDescription";
 import TripHeader from "./components/TripHeader";
 import TripReservation from "./components/TripReservation";
 
@@ -18,6 +19,7 @@ const TripDetails = async ({ params }: { params: { tripId: string } }) => {
     <div className="container mx-auto">
       <TripHeader trip={trip} />
       <TripReservation trip={trip} />
+      <TripDescription description={trip.description} />
     </div>
   );
 };
