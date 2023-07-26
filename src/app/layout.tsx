@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { NextAuthProvider } from "@/providers/auth";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -25,6 +26,7 @@ export default function RootLayout({
         <NextAuthProvider>
           <Header />
           {children}
+          <Footer />
         </NextAuthProvider>
       </body>
     </html>

@@ -2,6 +2,7 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -16,7 +17,9 @@ const Header = () => {
   const handleMenu = () => setMenuIsOpen(!menuIsOpen);
   return (
     <div className="container mx-auto px-5 h-24 flex justify-between items-center">
-      <Image src="/logo.png" alt="Full Stack Week" width={183} height={32} />
+      <Link href="/">
+        <Image src="/logo.png" alt="Full Stack Week" width={183} height={32} />
+      </Link>
 
       {status === "unauthenticated" && (
         <button
